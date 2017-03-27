@@ -2,9 +2,9 @@ CMPT 310 Assignment 1
 Created by Lydia Zheng
 
 
-#C++ language for the whole program
+C++ language for the whole program
 ----------------------------------------------------------------------------------------------------------------
-###How to run the program:
+How to run the program:
 1)I put PartA and PartB in the same main function, so we should firstly run the PartA then run PartB.
 
 2)In the PartA:
