@@ -1,11 +1,11 @@
 ### CMPT 310 Assignment 1
-###Created by Lydia Zheng
+### Created by Lydia Zheng
 
 #### Introduction
 
-#####This assignment deals with an offline navigation problem. In the general case, search would be on a directed, labelled graph.
+##### This assignment deals with an offline navigation problem. In the general case, search would be on a directed, labelled graph.
 
-#####I used the A start search as my strategy to find the shortest path from the start point to the goal point. First of
+##### I used the A start search as my strategy to find the shortest path from the start point to the goal point. First of
 all, I create a class called SearchNode to represent the node with attributes x y coordinates, node-id, G(the node’s
 movement cost) and H(the Heuristic cost), a pointer pointing to it’s parent node. Also, I included the default constructor
 and parameterized constructor, GetF function to get the total costs(F = G + H) and GetH function(use Manhattan distance
@@ -22,12 +22,12 @@ we will get the goal node.
 
 
 
-C++ language for the whole program
+#### C++ language for the whole program
 ----------------------------------------------------------------------------------------------------------------
-How to run the program:
-1)I put PartA and PartB in the same main function, so we should firstly run the PartA then run PartB.
+##### How to run the program:
+##### 1)I put PartA and PartB in the same main function, so we should firstly run the PartA then run PartB.
 
-2)In the PartA:
+##### 2)In the PartA:
 	a)Show a 18*18 grid map with '.' and obstacles with '|' and '--'.
 	b)Input the start cell's coordinate and the goal cell's coordinate .
 		<e.g> start cell:
@@ -41,7 +41,7 @@ How to run the program:
 		the length of the path and
 		the total number of the cells on the frontier.
 
-3)In the PartB:
+##### 3)In the PartB:
 	a)Show a new 18*18 grid map with '.' , obstacles with '|' and '--' and A,B,C,D landmarks.
 	b)Input the start cell's coordinate and the goal cell's coordinate .
 		<e.g> start cell:
