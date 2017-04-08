@@ -3,18 +3,12 @@
 
 #### Introduction
 
-##### This assignment deals with an offline navigation problem. In the general case, search would be on a directed, labelled graph.
+### This assignment deals with an offline navigation problem. In general, Search can be on a directed, labelled graph.
 
-##### I used the A start search as my strategy to find the shortest path from the start point to the goal point. First of
-all, I create a class called SearchNode to represent the node with attributes x y coordinates, node-id, G is the node’s movement cost and H, which represents the Heuristic cost is a pointer pointing to its parent node. Also, I included the default constructor
-and parameterized constructor, GetF function to get the total costs by F = G + H and GetH function which uses Manhattan distance which add the x differences and y differences between the current node and the goal node. After that, I created the class
-called PathSearch used to find the path from the start node to goal node. For the implementation of each function in the
-class, they are included in the Astarsearch.cpp. The main idea of the A star search is that we first create two lists, open
-list and close list to hold nodes. we start with the start node and put it into the open list, then expanding the adjacent nodes of the current node retrieved from the open list with the smallest value when the node would be the start node at the first time.
-Then put the current node into the close list. The adjacent nodes of the current node would be right node, left node, upper
-node and down node. Next, we check the expanded nodes, if the node is the block one or is out of boundary, then just skip
-the node. If not, we add the node into the open list and continue the process recursively. Moreover, if the expanded node is
-already in the open list, we need to check if its value and pointer to its parent need to be updated. After expansions, we will get the goal node.
+I used the A start search as my strategy to find the shortest path from the start point to the goal point. 
+I create a class called SearchNode to represent the node with attributes x y coordinates, node-id,G is the node’s movement cost and H, which represents the Heuristic cost is a pointer pointing to it’s parent node. Also, I included the default constructor and parameterized constructor, GetF function to get the total costs by F = G + H and GetH function that uses Manhattan distance. The Manhattan distance adds the x differences and y differences between the current node and the goal node. 
+
+I created the class called PathSearch used to find the path from the start node to goal node. For the implementation of each function in the class, they are included in the Astarsearch.cpp. The main idea of the A star search is that we first create two lists, open list and close list to hold nodes. We start with the start node and put it into the open list, and then expanding the adjacent nodes of the current node retrieved from the open list with the smallest value when the node would be the start node at the first time. After that, we put the current node into the close list. The adjacent nodes of the current node are the right node, left node, and upper node and down node. Next, we check the expanded nodes, if the node is the block or is out of boundary, then we just skip the node. Otherwise, we add the node into the open list and continue the process recursively. Moreover, if the expanded node is already in the open list, we need to check if its value and pointer to its parent need to be updated. After expansions, we will get the goal node.
 
 
 
