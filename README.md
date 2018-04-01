@@ -11,9 +11,12 @@ I used the A star search as my strategy to find the shortest path from the start
 
 **I wrote two C++ classes, namely `SearchNode` and `PathSearch`. Below are the explanation of these two classes.**
 
-I create a class called SearchNode to represent the node with attributes x y coordinates, node-id,G is the node’s movement cost and H, which represents the Heuristic cost is a pointer pointing to it’s parent node. Also, I included the default constructor and parameterized constructor, GetF function to get the total costs by F = G + H and GetH function that uses Manhattan distance. The Manhattan distance adds the x differences and y differences between the current node and the goal node. 
 
-I created the class called PathSearch used to find the path from the start node to goal node. For the implementation of each function in the class, they are included in the Astarsearch.cpp. The main idea of the A star search is that we first create two lists, open list and close list to hold nodes. We start with the start node and put it into the open list, and then expanding the adjacent nodes of the current node retrieved from the open list with the smallest value when the node would be the start node at the first time. After that, we put the current node into the close list. The adjacent nodes of the current node are the right node, left node, and upper node and down node. Next, we check the expanded nodes, if the node is the block or is out of boundary, then we just skip the node. Otherwise, we add the node into the open list and continue the process recursively. Moreover, if the expanded node is already in the open list, we need to check if its value and pointer to its parent need to be updated. After expansions, we will get the goal node.
+I used the A start search as my strategy to find the shortest path from the start point to the goal point. 
+I create a class called SearchNode to represent the node with attributes x y coordinates, node-id,G is the node’s movement cost and H, which represents the Heuristic cost is a pointer pointing to its parent node. Also, I included the default constructor and parameterized constructor, GetF function is to get the total costs by F = G + H and GetH function that uses Manhattan distance. The Manhattan distance adds the x differences and y differences between the current node and the goal node. 
+
+
+I created a class called PathSearch which is used to find the path from the start node to the goal node. For the implementation of each function in the class, they are included in the Astarsearch.cpp. The main idea of the A star search is that we first create two lists, open list and close list to hold nodes. We start with the start node and put it into the open list, and then expanding the adjacent nodes of the current node retrieved from the open list with the smallest value when the node would be the start node at the first time. After that, we put the current node into the close list. The adjacent nodes of the current node are the right node, left node, and upper node and down node. Next, we check the expanded nodes, if the node is the block or is out of boundary, then we just skip the node. Otherwise, we add the node into the open list and continue the process recursively. Moreover, if the expanded node is already in the open list, we need to check whether its value and pointer to its parent need to be updated. After expansions, we will get the goal node.
 
 
 
@@ -50,5 +53,5 @@ I created the class called PathSearch used to find the path from the start node 
 	   ii/  Show each cell of the path, the length of the path.
 	   iii/ If the more efficient path is not the shortest path, the output will show the number of cells on the frontier 
 	       from start cell to the nearest landmark and the number of cells on the frontier from the goal cell to the nearest landmark. 
-	   iv/  And it will also show the number of the whole path cells on the frontier from the goal cell to the goal cell.
+	   iv/  And it also show the number of the whole path cells on the frontier from the goal cell to the goal cell.
 		
