@@ -1,21 +1,28 @@
-### CMPT 310 Assignment 1
-### Created by Lydia Zheng
+## CMPT 310 Assignment 1
+Created by Lydia Zheng
 
-#### Introduction
+### Introduction
+This is an assignment for course Artificial Intelligence Survey in Simon Fraser University. It was designed to study and implement A* search algorithm. It was written in C++.
 
-### This assignment deals with an offline navigation problem. In general, Search can be on a directed, labelled graph.
+### Algorithm overview 
+#### This assignment deals with an offline navigation problem. In general, Search can be applied on a directed, labelled graph.
+
+I used the A star search as my strategy to find the shortest path from the start point to the goal point. 
+
+**I wrote two C++ classes, namely `SearchNode` and `PathSearch`. Below are the explanation of these two classes.**
+
 
 I used the A start search as my strategy to find the shortest path from the start point to the goal point. 
 I create a class called SearchNode to represent the node with attributes x y coordinates, node-id,G is the node’s movement cost and H, which represents the Heuristic cost is a pointer pointing to its parent node. Also, I included the default constructor and parameterized constructor, GetF function is to get the total costs by F = G + H and GetH function that uses Manhattan distance. The Manhattan distance adds the x differences and y differences between the current node and the goal node. 
+
 
 I created a class called PathSearch which is used to find the path from the start node to the goal node. For the implementation of each function in the class, they are included in the Astarsearch.cpp. The main idea of the A star search is that we first create two lists, open list and close list to hold nodes. We start with the start node and put it into the open list, and then expanding the adjacent nodes of the current node retrieved from the open list with the smallest value when the node would be the start node at the first time. After that, we put the current node into the close list. The adjacent nodes of the current node are the right node, left node, and upper node and down node. Next, we check the expanded nodes, if the node is the block or is out of boundary, then we just skip the node. Otherwise, we add the node into the open list and continue the process recursively. Moreover, if the expanded node is already in the open list, we need to check whether its value and pointer to its parent need to be updated. After expansions, we will get the goal node.
 
 
 
-#### C++ language for the whole program
 ----------------------------------------------------------------------------------------------------------------
-##### How to run the program:
-##### 1) I put PartA and PartB in the same main function, so we should firstly run the PartA then run PartB.
+### How to run the program:
+##### 1) PartA and PartB stay the same main function, so first run PartA then PartB
 
 ##### 2) In the PartA:
 	a) Show an 18*18 grid map with '.' and obstacles with '|' and '--'.
