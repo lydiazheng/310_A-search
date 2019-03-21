@@ -2,21 +2,21 @@
 Created by Lydia Zheng
 
 ### Introduction
-This is an assignment for course Artificial Intelligence Survey in Simon Fraser University. It was designed to study and implement A* search algorithm. It was written in C++.
+This is an assignment for course Artificial Intelligence Survey in Simon Fraser University. The program, written in C++, was designed to study and implement A* search algorithm.
 
 ### Algorithm overview 
-#### This assignment deals with an offline navigation problem. In general, Search can be applied on a directed, labelled graph.
+#### This assignment deals with an offline navigation problem. In general, the search algorithm can be applied on a directed and labelled graph.
 
-I used the A star search as my strategy to find the shortest path from the start point to the goal point. 
+A star search as the chosen strategy aims to find the shortest path between start point and the goal point. 
 
-**I wrote two C++ classes, namely `SearchNode` and `PathSearch`. Below are the explanation of these two classes.**
+**Two C++ classes, namely `SearchNode` and `PathSearch` are created in the implementation. Below are the explanation of these two classes.**
+
+A start search was used as my strategy to find the shortest path from the start point to the goal point. 
+
+The class named 'SearchNode' represents the node with attributes x y coordinates, node-id. G is the node’s movement cost and H, which represents the Heuristic cost, is a pointer storing the address its parent node. In addition, the default constructor and parameterized constructor are customized. GetF function, who utilized Manhattan distance function, targets on getting the total costs by F = G + H. The Manhattan distance adds the differences in x and y directions between the current node and the goal node. 
 
 
-I used the A start search as my strategy to find the shortest path from the start point to the goal point. 
-I create a class called SearchNode to represent the node with attributes x y coordinates, node-id,G is the node’s movement cost and H, which represents the Heuristic cost is a pointer pointing to its parent node. Also, I included the default constructor and parameterized constructor, GetF function is to get the total costs by F = G + H and GetH function that uses Manhattan distance. The Manhattan distance adds the x differences and y differences between the current node and the goal node. 
-
-
-I created a class called PathSearch which is used to find the path from the start node to the goal node. For the implementation of each function in the class, they are included in the Astarsearch.cpp. The main idea of the A star search is that we first create two lists, open list and close list to hold nodes. We start with the start node and put it into the open list, and then expanding the adjacent nodes of the current node retrieved from the open list with the smallest value when the node would be the start node at the first time. After that, we put the current node into the close list. The adjacent nodes of the current node are the right node, left node, and upper node and down node. Next, we check the expanded nodes, if the node is the block or is out of boundary, then we just skip the node. Otherwise, we add the node into the open list and continue the process recursively. Moreover, if the expanded node is already in the open list, we need to check whether its value and pointer to its parent need to be updated. After expansions, we will get the goal node.
+The class 'PathSearch' is to find the path from the starting node to the goal node. For the implementation of each function are included in the Astarsearch.cpp. The main idea of the A star search is we first create two lists, open list and close list to hold nodes. We insert the starting node into the open list, then expanding the adjacent nodes of the current node are retrieved from the open list with the smallest value when such node becomes starting node at the first occasion. After that, the current node is inserted into the close list. The adjacent nodes of the current node are defined by its right node, left node, upper node and the node below except boundary nodes. The node were appended into the open list and continue the process recursively. Moreover, if the expanded node is already in the open list, we need to check whether its value and the pointer to its parent need to be updated. After expansions, we will get the goal node.
 
 
 
